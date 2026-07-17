@@ -2,7 +2,7 @@ const features = [
   {
     title: "Physician-Directed Care",
     description:
-      "Thoughtful aesthetic care provided under the direction of Dallas Alvey, MD.",
+      "Physician-directed aesthetic care led by Dallas Alvey, MD.",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -20,7 +20,7 @@ const features = [
   {
     title: "Advanced Technology",
     description:
-      "Advanced laser platforms and treatment technologies selected for safety and results.",
+      "Advanced laser and aesthetic technology selected for safety and beautiful results.",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ const features = [
     ),
   },
   {
-    title: "Customized Treatment Plans",
+    title: "Personalized Treatment Plans",
     description:
       "Every recommendation is tailored to your goals, comfort level, and desired outcome.",
     icon: (
@@ -76,46 +76,48 @@ const features = [
 
 export default function WhyChoose() {
   return (
-    <section id="about" className="bg-white py-14 sm:py-16">
-      <div className="mx-auto max-w-[1500px] px-6 sm:px-10 lg:px-16 xl:px-24">
-        <div className="grid gap-8 lg:grid-cols-[34%_66%] lg:items-center">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#6f876f] sm:text-sm">
-              Why Choose Identity
-            </p>
+    <section id="about" className="bg-white py-12 sm:py-14">
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#6f876f] sm:text-sm">
+            Why Choose Identity
+          </p>
 
-            <h2 className="mt-4 font-serif text-4xl leading-tight text-[#222222] sm:text-5xl">
-              Luxury Care.
-              <span className="block text-[#6f876f]">Beautiful Results.</span>
-            </h2>
+          <h2 className="mt-4 font-serif text-4xl leading-tight text-[#222222] sm:text-5xl">
+            Luxury Care.
+            <span className="block text-[#6f876f]">
+              Beautiful Results.
+            </span>
+          </h2>
 
-            <p className="mt-5 max-w-xl leading-7 text-stone-600">
-              We combine physician-directed care, advanced technology, and a
-              personalized approach to help you look refreshed, confident, and
-              naturally beautiful.
-            </p>
-          </div>
+          <p className="mx-auto mt-5 max-w-2xl leading-7 text-stone-600">
+            We combine physician-directed care, advanced technology, and a
+            personalized approach to help you look refreshed, confident, and
+            naturally beautiful.
+          </p>
+        </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {features.map((feature) => (
-              <article
-                key={feature.title}
-                className="rounded-[1.5rem] border border-stone-200 bg-[#f9f7f4] p-5"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#e8eee5] text-[#5f765f]">
-                  {feature.icon}
-                </div>
+        <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-2">
+          {features.map((feature) => (
+            <article
+              key={feature.title}
+              className="flex gap-4 rounded-[1.5rem] border border-stone-200 bg-[#f9f7f4] p-5 shadow-sm"
+            >
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e8eee5] text-[#5f765f]">
+                {feature.icon}
+              </div>
 
-                <h3 className="mt-4 font-serif text-lg leading-6 text-[#222222]">
+              <div>
+                <h3 className="font-serif text-xl leading-6 text-[#222222]">
                   {feature.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-stone-600">
+                <p className="mt-2 text-sm leading-6 text-stone-600">
                   {feature.description}
                 </p>
-              </article>
-            ))}
-          </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
