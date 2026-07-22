@@ -31,3 +31,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.booking-button-light,
+.booking-button-light * {
+  color: #2f4638 !important;
+}
+
+.booking-button-dark,
+.booking-button-dark * {
+  color: #ffffff !important;
+}

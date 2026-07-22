@@ -3,21 +3,21 @@ const results = [
     title: "Lip Enhancement",
     description:
       "Natural-looking volume and definition designed to enhance your unique features.",
-    image: "/results-lip-enhancement.png",
+    image: "/images/results/results-lip-enhancement.png",
     href: "/#book-now",
   },
   {
     title: "Sciton BBL HERO™",
     description:
       "Improves redness, sun damage, and uneven skin tone for a clearer, brighter complexion.",
-    image: "/results-bbl-hero.png",
+    image: "/images/results/results-bbl-hero.png",
     href: "/#book-now",
   },
   {
     title: "Sciton MicroLaserPeel™",
     description:
       "Improves fine lines, texture, and tone while revealing smoother, healthier-looking skin.",
-    image: "/results-microlaserpeel.png",
+    image: "/images/results/results-microlaserpeel.png",
     href: "/#book-now",
   },
 ];

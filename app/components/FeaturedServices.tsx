@@ -1,123 +1,174 @@
 const services = [
   {
+    id: "injectables",
+    eyebrow: "Enhance Your Natural Features",
     title: "Injectables & Facial Balancing",
     description:
-      "Natural-looking wrinkle treatments, dermal fillers, lip enhancement, and personalized facial balancing.",
-    image: "/injectables.png",
-    href: "/#book-now",
-    layout:
-      "lg:col-span-5 lg:row-span-2 lg:min-h-[520px]",
-    imagePosition: "object-center",
+      "Refresh your appearance with physician-directed injectables and personalized facial balancing. Every treatment plan is designed around your anatomy, goals, and comfort while preserving natural expression.",
+    treatments: [
+      "Botox®, Jeuveau®, Dysport® & Xeomin®",
+      "Lip Enhancement",
+      "Cheek, Chin & Jawline Filler",
+      "Full Facial Balancing",
+    ],
+    image: "/images/services/injectables.png",
+    imageAlt:
+      "Natural-looking injectable treatment at Identity Aesthetics MedSpa in Kingwood",
+    href: "/injectables",
+    reverse: false,
   },
   {
+    id: "laser",
+    eyebrow: "Advanced Skin Rejuvenation",
     title: "Laser Skin Rejuvenation",
     description:
-      "Advanced treatments for sun damage, redness, fine lines, texture, and visible signs of aging.",
-    image: "/laser-rejuvenation.png",
-    href: "/#book-now",
-    layout:
-      "lg:col-span-7 lg:min-h-[250px]",
-    imagePosition: "object-center",
+      "Improve discoloration, redness, fine lines, texture, and signs of sun damage with advanced laser treatments selected for your skin concerns and desired downtime.",
+    treatments: [
+      "Sciton BBL HERO™",
+      "MicroLaserPeel™",
+      "ProFractional™ Resurfacing",
+      "Personalized Laser Consultations",
+    ],
+    image: "/images/services/laser-rejuvenation.png",
+    imageAlt:
+      "Laser skin rejuvenation treatment at Identity Aesthetics MedSpa",
+    href: "/laser-rejuvenation",
+    reverse: true,
   },
   {
+    id: "laser-hair-removal",
+    eyebrow: "Smoother Skin, Lasting Confidence",
     title: "Laser Hair Removal",
     description:
-      "Personalized treatments for smoother skin and lasting confidence.",
-    image: "/laser-hair-removal.png",
-    href: "/#book-now",
-    layout:
-      "lg:col-span-3 lg:min-h-[250px]",
-    imagePosition: "object-center",
+      "Reduce unwanted hair with customized treatment packages for the face and body. Our experienced laser professionals adjust each session based on your skin, hair, and treatment progress.",
+    treatments: [
+      "Face & Neck",
+      "Underarms",
+      "Brazilian & Bikini",
+      "Legs, Arms, Back & Full Body",
+    ],
+    image: "/images/services/laser-hair-removal.png",
+    imageAlt:
+      "Professional laser hair removal treatment using advanced technology",
+    href: "/laser-hair-removal",
+    reverse: false,
   },
   {
+    id: "facials",
+    eyebrow: "Customized for Your Skin",
     title: "Customized Facials",
     description:
-      "Results-driven facials customized to cleanse, nourish, correct, and restore.",
-    image: "/customized-facials.png",
-    href: "/#book-now",
-    layout:
-      "lg:col-span-4 lg:min-h-[250px]",
-    imagePosition: "object-center",
+      "Your facial should be as individual as your skin. We begin with your goals and concerns, then personalize the treatment with professional exfoliation, hydration, corrective care, and optional enhancements.",
+    treatments: [
+      "Customized Facial Treatments",
+      "Dermaplaning & Microdermabrasion",
+      "Chemical Peels",
+      "Nano Infusion & Glo2Facial",
+    ],
+    image: "/images/services/customized-facials.png",
+    imageAlt:
+      "Relaxing customized facial treatment at Identity Aesthetics MedSpa",
+    href: "/facials",
+    reverse: true,
   },
 ];
 
 export default function FeaturedServices() {
   return (
     <section
-      id="featured-treatments"
-      className="bg-[#f9f7f4] py-16 sm:py-20"
+      id="services"
+      className="overflow-hidden bg-[#f9f7f4] py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
-        {/* Section Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#6f876f] sm:text-sm">
-            Personalized Aesthetic Treatments
+            Our Signature Services
           </p>
 
           <h2 className="mt-4 font-serif text-4xl leading-tight text-[#222222] sm:text-5xl">
-            Discover Treatments
+            Personalized Care for
             <span className="block text-[#6f876f]">
-              Designed Around You
+              Your Most Confident Self
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl leading-7 text-stone-600">
-            From subtle injectable enhancements to advanced laser treatments
-            and customized skincare, every treatment plan is created around
-            your concerns, goals, and natural features.
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-stone-600">
+            Explore customized aesthetic treatments designed around your
+            features, skin, goals, and lifestyle.
           </p>
         </div>
 
-        {/* Staggered Service Grid */}
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2">
+        <div className="mt-14 space-y-12 sm:mt-16 sm:space-y-16 lg:space-y-20">
           {services.map((service) => (
             <article
+              id={service.id}
               key={service.title}
-              className={`group relative min-h-[320px] overflow-hidden rounded-[1.75rem] bg-stone-200 shadow-sm ${service.layout}`}
+              className="grid items-center overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm lg:grid-cols-2"
             >
-              <img
-                src={service.image}
-                alt={`${service.title} at Identity Aesthetics MedSpa in Kingwood, Texas`}
-                className={`absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.03] ${service.imagePosition}`}
-              />
+              <div
+                className={`relative min-h-[300px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px] ${
+                  service.reverse ? "lg:order-2" : ""
+                }`}
+              >
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
 
-              {/* Image shading */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+              </div>
 
-              {/* Card Content */}
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
-                  Identity Aesthetics
-                </p>
+              <div
+                className={`flex items-center px-7 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-16 ${
+                  service.reverse ? "lg:order-1" : ""
+                }`}
+              >
+                <div className="max-w-xl">
+                  <div className="flex items-center gap-4">
+                    <span className="h-px w-10 bg-[#c7a35b]" />
 
-                <h3 className="mt-2 max-w-md font-serif text-2xl leading-tight text-white sm:text-3xl">
-                  {service.title}
-                </h3>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#6f876f] sm:text-xs">
+                      {service.eyebrow}
+                    </p>
+                  </div>
 
-                <p className="mt-3 max-w-md text-sm leading-6 text-white/80">
-                  {service.description}
-                </p>
+                  <h3 className="mt-5 font-serif text-3xl leading-tight text-[#222222] sm:text-4xl lg:text-[2.75rem]">
+                    {service.title}
+                  </h3>
 
-                <a
-                  href={service.href}
-                  className="mt-5 inline-flex items-center gap-2 border-b border-[#d6ba7a] pb-1 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:text-[#e3cb96]"
-                >
-                  Explore Treatment
-                  <span aria-hidden="true">→</span>
-                </a>
+                  <p className="mt-5 text-base leading-8 text-stone-600">
+                    {service.description}
+                  </p>
+
+                  <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                    {service.treatments.map((treatment) => (
+                      <div
+                        key={treatment}
+                        className="flex items-start gap-3 text-sm leading-6 text-stone-700"
+                      >
+                        <span
+                          className="mt-[9px] h-1.5 w-1.5 flex-none rounded-full bg-[#c7a35b]"
+                          aria-hidden="true"
+                        />
+
+                        <span>{treatment}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+  href={service.href}
+  className="mt-8 inline-flex items-center gap-3 border-b border-[#c7a35b] pb-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#536b53] transition hover:text-[#344834]"
+>
+                  
+                    Explore This Service
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
               </div>
             </article>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-10 text-center">
-          <a
-            href="/#book-now"
-            className="inline-flex items-center justify-center rounded-full border border-[#6f876f] px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-[#536b53] transition hover:bg-[#6f876f] hover:text-white"
-          >
-            Find Your Treatment
-          </a>
         </div>
       </div>
     </section>

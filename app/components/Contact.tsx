@@ -113,59 +113,59 @@ export default function Contact() {
       <footer className="bg-[#222222] px-6 py-16 text-white sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-[1500px]">
           {/* Centered Brand */}
-          <div className="border-b border-white/15 pb-12 text-center">
-            <a
-              href="/"
-              aria-label="Identity Aesthetics MedSpa homepage"
-              className="inline-flex justify-center"
-            >
-              <img
-                src="/identity-logo.png"
-                alt="Identity Aesthetics MedSpa"
-                className="h-28 w-auto object-contain sm:h-32"
-              />
-            </a>
+<div className="border-b border-white/15 pb-12 text-center">
+  <a
+    href="/"
+    aria-label="Identity Aesthetics MedSpa homepage"
+    className="inline-flex justify-center"
+  >
+    <img
+      src="/images/logos/logo.png"
+      alt="Identity Aesthetics MedSpa"
+      className="h-28 w-auto object-contain sm:h-32"
+    />
+  </a>
 
-            <p className="mx-auto mt-6 max-w-2xl leading-7 text-white/70">
-              Personalized injectables, advanced laser treatments, laser hair
-              removal, and customized skincare in a relaxing, luxury
-              environment.
-            </p>
+  <p className="mx-auto mt-6 max-w-2xl leading-7 text-white/70">
+    Personalized injectables, advanced laser treatments, laser hair
+    removal, and customized skincare in a relaxing, luxury
+    environment.
+  </p>
 
-            <p className="mt-4 text-sm leading-6 text-white/55">
-              Physician-directed aesthetic care under the direction of Dallas
-              Alvey, MD.
-            </p>
+  <p className="mt-4 text-sm leading-6 text-white/55">
+    Physician-directed aesthetic care under the direction of Dallas
+    Alvey, MD.
+  </p>
 
-            <div className="mt-7 flex flex-wrap justify-center gap-x-7 gap-y-3">
-              <a
-                href={instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/75 transition hover:text-[#c7a35b]"
-              >
-                Instagram
-              </a>
+  <div className="mt-7 flex flex-wrap justify-center gap-x-7 gap-y-3">
+    <a
+      href={instagramUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white/75 transition hover:text-[#c7a35b]"
+    >
+      Instagram
+    </a>
 
-              <a
-                href={facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/75 transition hover:text-[#c7a35b]"
-              >
-                Facebook
-              </a>
+    <a
+      href={facebookUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white/75 transition hover:text-[#c7a35b]"
+    >
+      Facebook
+    </a>
 
-              <a
-                href={readReviewsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/75 transition hover:text-[#c7a35b]"
-              >
-                Google Profile
-              </a>
-            </div>
-          </div>
+    <a
+      href={readReviewsUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white/75 transition hover:text-[#c7a35b]"
+    >
+      Google Profile
+    </a>
+  </div>
+</div>
 
           {/* Footer Columns */}
           <div className="grid gap-12 border-b border-white/15 py-12 md:grid-cols-2 lg:grid-cols-4">
