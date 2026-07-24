@@ -169,20 +169,20 @@ export default function LaserRejuvenationPage() {
               </p>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a
-                  f="#book-now"
-                  className="inlhreine-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
-                >
-                  Book a Consultation
-                </a>
+  <a
+    href="#book-now"
+    className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
+  >
+    Book a Consultation
+  </a>
 
-                <a
-                  href="#laser-treatments"
-                  className="inline-flex min-h-14 items-center justify-center rounded-full border border-[#718072] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-[#354438] transition duration-300 hover:bg-white"
-                >
-                  Explore Treatments
-                </a>
-              </div>
+  <a
+    href="#treatments"
+    className="inline-flex min-h-14 items-center justify-center rounded-full border border-[#718072] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-[#354438] transition duration-300 hover:bg-white"
+  >
+    Explore Treatments
+  </a>
+</div>
 
               <div className="mt-12 grid max-w-lg grid-cols-3 border-t border-stone-300 pt-7">
                 <div>
