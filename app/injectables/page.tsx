@@ -269,23 +269,18 @@ export default function InjectablesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                 </div>
 
-                <div className="p-7">
+                <div className="flex h-full flex-col p-7">
                   <div className="mb-5 h-px w-10 bg-[#c7a35b]" />
 
                   <h3 className="font-serif text-2xl leading-tight text-[#283029]">
                     {service.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-stone-600">
-                    {service.description}
-                  </p>
+                  <p className="mt-4 flex-1 text-sm leading-7 text-stone-600">
+  {service.description}
+</p>
 
-                  <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-[0.16em] text-[#55705a]">
-                    Learn More
-                    <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
-                  </span>
+                  
                 </div>
               </a>
             ))}
@@ -643,11 +638,12 @@ export default function InjectablesPage() {
           </p>
 
           <a
-            href="#"
-            className="mt-10 inline-flex items-center justify-center rounded-full bg-[#2d8f72] px-10 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg transition duration-300 hover:bg-[#24755d] hover:-translate-y-0.5"
-          >
-            Book Your Consultation
-          </a>
+          
+  href="#book-now"
+  className="mt-10 inline-flex items-center justify-center rounded-full bg-[#2d8f72] px-10 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-[#24755d]"
+>
+  Book Your Consultation
+</a>
         </div>
       </section>
     </main>

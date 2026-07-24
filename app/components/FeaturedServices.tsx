@@ -1,75 +1,41 @@
-const services = [
+import Image from "next/image";
+import Link from "next/link";
+
+type Service = {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+};
+
+const services: Service[] = [
   {
-    id: "injectables",
-    eyebrow: "Enhance Your Natural Features",
     title: "Injectables & Facial Balancing",
     description:
-      "Refresh your appearance with physician-directed injectables and personalized facial balancing. Every treatment plan is designed around your anatomy, goals, and comfort while preserving natural expression.",
-    treatments: [
-      "Botox®, Jeuveau®, Dysport® & Xeomin®",
-      "Lip Enhancement",
-      "Cheek, Chin & Jawline Filler",
-      "Full Facial Balancing",
-    ],
+      "Smooth wrinkles, restore volume, and enhance your natural beauty.",
     image: "/images/services/injectables.png",
-    imageAlt:
-      "Natural-looking injectable treatment at Identity Aesthetics MedSpa in Kingwood",
     href: "/injectables",
-    reverse: false,
   },
   {
-    id: "laser",
-    eyebrow: "Advanced Skin Rejuvenation",
-    title: "Laser Skin Rejuvenation",
-    description:
-      "Improve discoloration, redness, fine lines, texture, and signs of sun damage with advanced laser treatments selected for your skin concerns and desired downtime.",
-    treatments: [
-      "Sciton BBL HERO™",
-      "MicroLaserPeel™",
-      "ProFractional™ Resurfacing",
-      "Personalized Laser Consultations",
-    ],
-    image: "/images/services/laser-rejuvenation.png",
-    imageAlt:
-      "Laser skin rejuvenation treatment at Identity Aesthetics MedSpa",
-    href: "/laser-rejuvenation",
-    reverse: true,
-  },
-  {
-    id: "laser-hair-removal",
-    eyebrow: "Smoother Skin, Lasting Confidence",
-    title: "Laser Hair Removal",
-    description:
-      "Reduce unwanted hair with customized treatment packages for the face and body. Our experienced laser professionals adjust each session based on your skin, hair, and treatment progress.",
-    treatments: [
-      "Face & Neck",
-      "Underarms",
-      "Brazilian & Bikini",
-      "Legs, Arms, Back & Full Body",
-    ],
-    image: "/images/services/laser-hair-removal.png",
-    imageAlt:
-      "Professional laser hair removal treatment using advanced technology",
-    href: "/laser-hair-removal",
-    reverse: false,
-  },
-  {
-    id: "facials",
-    eyebrow: "Customized for Your Skin",
     title: "Customized Facials",
     description:
-      "Your facial should be as individual as your skin. We begin with your goals and concerns, then personalize the treatment with professional exfoliation, hydration, corrective care, and optional enhancements.",
-    treatments: [
-      "Customized Facial Treatments",
-      "Dermaplaning & Microdermabrasion",
-      "Chemical Peels",
-      "Nano Infusion & Glo2Facial",
-    ],
+      "Personalized facial treatments designed for your unique skin concerns.",
     image: "/images/services/customized-facials.png",
-    imageAlt:
-      "Relaxing customized facial treatment at Identity Aesthetics MedSpa",
     href: "/facials",
-    reverse: true,
+  },
+  {
+    title: "Laser Hair Removal",
+    description:
+      "Comfortable, long-lasting hair reduction using advanced laser technology.",
+    image: "/images/services/laser-hair-removal.png",
+    href: "/laser-hair-removal",
+  },
+  {
+    title: "Laser Skin Rejuvenation",
+    description:
+      "Improve tone, texture, pigmentation, and visible signs of aging.",
+    image: "/images/services/laser-rejuvenation.png",
+    href: "/laser-rejuvenation",
   },
 ];
 
@@ -77,97 +43,70 @@ export default function FeaturedServices() {
   return (
     <section
       id="services"
-      className="overflow-hidden bg-[#f9f7f4] py-16 sm:py-20 lg:py-24"
+      className="bg-[#F9F7F4] px-5 py-16 sm:px-8 sm:py-20 lg:px-12"
     >
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#6f876f] sm:text-sm">
-            Our Signature Services
+      <div className="mx-auto max-w-6xl">
+        {/* Section heading */}
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#8A7141]">
+            Personalized Aesthetic Care
           </p>
 
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-[#222222] sm:text-5xl">
-            Personalized Care for
-            <span className="block text-[#6f876f]">
-              Your Most Confident Self
-            </span>
+          <h2 className="font-serif text-3xl font-medium tracking-wide text-[#3F463F] sm:text-4xl lg:text-5xl">
+            Explore Our Services
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-stone-600">
-            Explore customized aesthetic treatments designed around your
-            features, skin, goals, and lifestyle.
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#666A66] sm:text-base">
+            Personalized aesthetic treatments designed to help you look
+            refreshed, confident, and naturally beautiful.
           </p>
         </div>
 
-        <div className="mt-14 space-y-12 sm:mt-16 sm:space-y-16 lg:space-y-20">
+        {/* Service cards */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
           {services.map((service) => (
-            <article
-              id={service.id}
+            <Link
               key={service.title}
-              className="grid items-center overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm lg:grid-cols-2"
+              href={service.href}
+              aria-label={`Learn more about ${service.title}`}
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#E8E2D8] bg-white shadow-[0_8px_28px_rgba(70,70,60,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(70,70,60,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A8B7A2] focus-visible:ring-offset-4"
             >
-              <div
-                className={`relative min-h-[300px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px] ${
-                  service.reverse ? "lg:order-2" : ""
-                }`}
-              >
-                <img
+              {/* Card image */}
+              <div className="relative h-56 w-full overflow-hidden sm:h-64 lg:h-72">
+                <Image
                   src={service.image}
-                  alt={service.imageAlt}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  alt={service.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
               </div>
 
-              <div
-                className={`flex items-center px-7 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-16 ${
-                  service.reverse ? "lg:order-1" : ""
-                }`}
-              >
-                <div className="max-w-xl">
-                  <div className="flex items-center gap-4">
-                    <span className="h-px w-10 bg-[#c7a35b]" />
+              {/* Card content */}
+              <div className="flex flex-1 flex-col px-6 py-6 sm:px-7 sm:py-7">
+                <h3 className="font-serif text-xl font-medium leading-snug text-[#3F463F] sm:text-2xl">
+                  {service.title}
+                </h3>
 
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#6f876f] sm:text-xs">
-                      {service.eyebrow}
-                    </p>
-                  </div>
+                <p className="mt-3 text-sm leading-6 text-[#6D706C] sm:text-[15px] sm:leading-7">
+                  {service.description}
+                </p>
 
-                  <h3 className="mt-5 font-serif text-3xl leading-tight text-[#222222] sm:text-4xl lg:text-[2.75rem]">
-                    {service.title}
-                  </h3>
-
-                  <p className="mt-5 text-base leading-8 text-stone-600">
-                    {service.description}
-                  </p>
-
-                  <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                    {service.treatments.map((treatment) => (
-                      <div
-                        key={treatment}
-                        className="flex items-start gap-3 text-sm leading-6 text-stone-700"
-                      >
-                        <span
-                          className="mt-[9px] h-1.5 w-1.5 flex-none rounded-full bg-[#c7a35b]"
-                          aria-hidden="true"
-                        />
-
-                        <span>{treatment}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <a
-  href={service.href}
-  className="mt-8 inline-flex items-center gap-3 border-b border-[#c7a35b] pb-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#536b53] transition hover:text-[#344834]"
->
-                  
-                    Explore This Service
-                    <span aria-hidden="true">→</span>
-                  </a>
+                <div className="mt-auto pt-5">
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#8A7141] transition-colors duration-300 group-hover:text-[#3F463F]">
+                    Learn More
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    >
+                      →
+                    </span>
+                  </span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

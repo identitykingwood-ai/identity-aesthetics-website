@@ -51,8 +51,8 @@ export default function Hero() {
                 </span>
 
                 <p className="text-sm font-medium text-stone-700">
-                  Trusted by hundreds of happy clients
-                </p>
+  Trusted by thousands of clients
+</p>
               </div>
 
               <div className="mt-5 grid gap-3 text-sm text-stone-600 sm:grid-cols-3">

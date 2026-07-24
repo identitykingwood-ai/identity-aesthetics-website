@@ -2,13 +2,9 @@
 
 import { useEffect } from "react";
 
-declare global {
-  interface Window {
-    blvd?: {
-      openBookingWidget: () => void;
-    };
-  }
-}
+type BoulevardWidget = {
+  openBookingWidget?: () => void;
+};
 
 export default function BoulevardBookingFix() {
   useEffect(() => {
@@ -21,16 +17,23 @@ export default function BoulevardBookingFix() {
 
       if (!bookingLink) return;
 
-      if (window.blvd?.openBookingWidget) {
-        event.preventDefault();
-        window.blvd.openBookingWidget();
-      }
+      // Prevent the link from scrolling anywhere.
+      event.preventDefault();
+
+      const boulevard = (
+        window as typeof window & {
+          blvd?: BoulevardWidget;
+        }
+      ).blvd;
+
+      boulevard?.openBookingWidget?.();
     };
 
-    document.addEventListener("click", openBoulevard);
+    // Capture the click before the browser follows the anchor.
+    document.addEventListener("click", openBoulevard, true);
 
     return () => {
-      document.removeEventListener("click", openBoulevard);
+      document.removeEventListener("click", openBoulevard, true);
     };
   }, []);
 

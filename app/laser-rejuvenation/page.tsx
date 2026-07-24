@@ -170,8 +170,8 @@ export default function LaserRejuvenationPage() {
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="#book-now"
-                  className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
+                  f="#book-now"
+                  className="inlhreine-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
                 >
                   Book a Consultation
                 </a>
@@ -431,7 +431,7 @@ export default function LaserRejuvenationPage() {
 
             <a
               href="#book-now"
-              className="mt-10 inline-flex min-h-14 items-center justify-center rounded-full bg-white px-8 text-xs font-semibold uppercase tracking-[0.18em] text-[#2f4638] transition duration-300 hover:bg-[#f1e8d7]"
+className="mt-10 inline-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
             >
               Schedule a Consultation
             </a>
@@ -665,7 +665,7 @@ export default function LaserRejuvenationPage() {
 
             <a
               href="#book-now"
-              className="mt-10 inline-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
+className="mt-10 inline-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
             >
               Book Your Consultation
             </a>

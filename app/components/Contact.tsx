@@ -400,24 +400,13 @@ export default function Contact() {
             </p>
 
             <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <a
-                href="/privacy-policy"
-                className="transition hover:text-white"
-              >
-                Privacy Policy
-              </a>
-
-              <a href="/terms" className="transition hover:text-white">
-                Terms of Use
-              </a>
-
-              <a
-                href="/accessibility"
-                className="transition hover:text-white"
-              >
-                Accessibility
-              </a>
-            </div>
+  <a
+    href="/privacy-policy"
+    className="transition hover:text-white"
+  >
+    Privacy Policy
+  </a>
+</div>
           </div>
         </div>
       </footer>

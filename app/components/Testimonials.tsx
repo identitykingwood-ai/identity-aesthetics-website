@@ -36,10 +36,11 @@ export default function Testimonials() {
             Client Experiences
           </p>
 
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-[#222222] sm:text-5xl">
-            Trusted by Hundreds of
-            <span className="block text-[#6f876f]">Happy Clients</span>
-          </h2>
+          
+            
+            <h2 className="...">
+  Trusted by Thousands of Happy Clients
+</h2>
 
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
             <span
@@ -95,12 +96,12 @@ export default function Testimonials() {
 
         <div className="mt-10 text-center">
           <a
-           href="https://g.page/r/CcJzv9oNQ9jTEBM/review"
+           href="https://maps.app.goo.gl/B8vAWDX7oggALMVA6"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-[#6f876f] px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#536b53] transition hover:bg-[#6f876f] hover:text-white"
           >
-            See More on Google
+            View All Google Reviews
           </a>
         </div>
       </div>

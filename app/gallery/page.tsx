@@ -1,5 +1,7 @@
 import BoulevardBookingFix from "../components/BoulevardBookingFix";
 
+import Results from "../components/Results";
+
 const browseCategories = [
   {
     title: "Lip Enhancement",
@@ -161,10 +163,10 @@ export default function GalleryPage() {
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="#browse-results"
+                  href="#lip-enhancement-results"
                   className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#2d8f72] px-8 text-xs font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-[#24755d]"
                 >
-                  Browse Results
+                  View Real Results
                 </a>
 
                 <a
@@ -247,64 +249,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* BROWSE RESULTS */}
-      <section
-  id="browse-results"
-  className="scroll-mt-32 bg-[#eef1eb] px-6 pt-36 pb-24 sm:px-10 lg:pt-40 lg:pb-28"
->
-    
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#a27b37]">
-              Browse by Treatment
-            </p>
-
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-[#283029] sm:text-5xl">
-              Explore Our Featured Results
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-stone-600">
-              Select a treatment category to view real client cases and learn
-              more about the goals behind each result.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-8 lg:grid-cols-3">
-            {browseCategories.map((category) => (
-              <a
-                key={category.title}
-                href={category.href}
-                className="group overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={category.image}
-                    alt={category.alt}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
-                  />
-                </div>
-
-                <div className="p-7">
-                  <div className="h-px w-10 bg-[#c7a35b]" />
-
-                  <h3 className="mt-6 font-serif text-3xl text-[#283029]">
-                    {category.title}
-                  </h3>
-
-                  <p className="mt-4 text-sm leading-7 text-stone-600">
-                    {category.description}
-                  </p>
-
-                  <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-[#55705a]">
-                    View Results
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* LIP ENHANCEMENT RESULTS */}
 <section
   id="lip-enhancement-results"
@@ -556,114 +501,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* BRANDS INTRO */}
-      <section className="bg-white px-6 py-20 sm:px-10 lg:py-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#a27b37]">
-            Brands & Technologies We Trust
-          </p>
-
-          <h2 className="mt-5 font-serif text-4xl leading-tight text-[#283029] sm:text-5xl">
-            Carefully Selected for Quality, Safety & Results
-          </h2>
-
-          <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-stone-600">
-            We carefully select the technologies, injectable products,
-            professional skincare, and payment partners used at Identity
-            Aesthetics MedSpa.
-          </p>
-        </div>
-      </section>
-
-      {/* TECHNOLOGY CARDS */}
-      <section className="bg-[#f4f0e9] px-6 py-20 sm:px-10 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#a27b37]">
-              Advanced Technology
-            </p>
-
-            <h2 className="mt-4 font-serif text-3xl text-[#283029] sm:text-4xl">
-              Medical Aesthetic Technology
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {technologyCards.map((brand) => (
-              <article
-                key={brand.name}
-                className="overflow-hidden rounded-[2rem] shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <img
-                  src={brand.image}
-                  alt={brand.alt}
-                  className="h-auto w-full"
-                />
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INJECTABLE CARDS */}
-      <section className="bg-white px-6 py-20 sm:px-10 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#a27b37]">
-              Trusted Injectable Brands
-            </p>
-
-            <h2 className="mt-4 font-serif text-3xl text-[#283029] sm:text-4xl">
-              Personalized Product Selection
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {injectableCards.map((brand) => (
-              <article
-                key={brand.name}
-                className="overflow-hidden rounded-[1.75rem] shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <img
-                  src={brand.image}
-                  alt={brand.alt}
-                  className="h-auto w-full"
-                />
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SKINCARE CARDS */}
-      <section className="bg-[#eef1eb] px-6 py-20 sm:px-10 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#a27b37]">
-              Professional Skincare
-            </p>
-
-            <h2 className="mt-4 font-serif text-3xl text-[#283029] sm:text-4xl">
-              Medical-Grade Skincare We Trust
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {skincareCards.map((brand) => (
-              <article
-                key={brand.name}
-                className="overflow-hidden rounded-[2rem] shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <img
-                  src={brand.image}
-                  alt={brand.alt}
-                  className="h-auto w-full"
-                />
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Results />
 
       {/* FINANCING CARDS */}
       <section className="bg-white px-6 py-20 sm:px-10 lg:py-24">
